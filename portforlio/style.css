@@ -1,0 +1,275 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #ffffff, #e4e4e4);
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    background: #000000;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+header h1 {
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+}
+
+header p {
+    opacity: 0.7;
+    margin-bottom: 1rem;
+}
+
+
+.profile-pic {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 1rem 0;
+    border: 3px solid #000000;
+    object-fit: cover;
+    box-shadow: 0 0 15px #000000;
+    transition: all 0.4s ease;
+    animation: glowPulse 3s infinite;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1) rotate(3deg);
+    box-shadow: 
+        0 0 20px #000000,
+        0 0 40px #000000,
+        0 0 60px #000000;
+    border-color: #000000;
+    cursor: pointer;
+}
+
+@keyframes glowPulse {
+    0% { box-shadow: 0 0 10px #000000; }
+    50% { box-shadow: 0 0 25px #000000; }
+    100% { box-shadow: 0 0 10px #000000; }
+}
+
+
+nav ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 12px;
+}
+
+nav ul li a {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #000000;
+    text-shadow: 0 0 8px #38bdf8;
+}
+
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+.skills {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills li {
+    background: rgba(56, 189, 248, 0.15);
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: 1px solid #f1f1f1;
+    transition: 0.3s;
+}
+
+.skills li:hover {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+
+.card {
+    background: rgba(2, 132, 199, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    transition: 0.3s;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 0 15px #38bdf8;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form textarea {
+    margin-bottom: 1rem;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: rgb(0, 0, 0);
+    color: #fff;
+}
+
+form input:focus,
+form textarea:focus {
+    border: 1px solid #000000;
+}
+
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #000000;
+    color: #0f172a;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #000000;
+    box-shadow: 0 0 10px #000000;
+}
+
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #000000;
+}
+
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .container {
+        margin: 1.5rem 1rem;
+        padding: 1.5rem;
+    }
+
+    nav ul li {
+        margin: 0 8px;
+    }
+
+    .skills {
+        gap: 8px;
+    }
+
+    .card {
+        padding: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        text-align: center;
+    }
+
+    form input,
+    form textarea {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+}
